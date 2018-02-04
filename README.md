@@ -23,4 +23,25 @@
    > No, because View canno't display a text, so it has no meaning, only Text can.
    
 3. What is the use of “__flex: 1__” in React-Native ?
-   > Expand to 100%
+   > Expand to 100%. 
+   > If siblings have also "flex" with value, then the area divided by the summerized amount.
+   ```javascript
+   import React, { Component } from 'react';
+   import { View } from 'react-native';
+
+   export default class FlexDimensionsBasics extends Component {
+     render() {
+       return (
+         // Try removing the `flex: 1` on the parent View.
+         // The parent will not have dimensions, so the children can't expand.
+         // What if you add `height: 300` instead of `flex: 1`?
+         <View style={{flex: 1}}>
+           <View style={{flex: 1, backgroundColor: 'powderblue'}} />
+           <View style={{flex: 2, backgroundColor: 'skyblue'}} />
+           <View style={{flex: 3, backgroundColor: 'steelblue'}} />
+         </View>
+       );
+     }
+   }
+   
+   ```
