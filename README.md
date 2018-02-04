@@ -24,8 +24,8 @@
    
 3. What is the use of “__flex: 1__” in React-Native ?
    > Expand to 100%. 
-   > If siblings have also "flex" with value, then the area divided by the summerized amount.
-   ```javascript
+   If siblings have also "flex" with value, then the area divided by the summerized amount.
+   ```javascript
    import React, { Component } from 'react';
    import { View } from 'react-native';
 
