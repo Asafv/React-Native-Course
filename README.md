@@ -5,6 +5,8 @@
 3. Donwload & install [Expo XDE](https://docs.expo.io/versions/latest/introduction/installation.html)
 4. Open the app via Expo ("Project" > "Open Project")
 5. Open with device - "Device" > "Open with IOS/Android"
+
+* This time we used Expo as development tool, next time we will start using React-Native directly. Please follow installation doc inside mail.
 ## Quiz Answers
 
 1. How to add __style__ to a React-Native component as __< Text />__ ?
