@@ -1,6 +1,10 @@
 # React Native Course - Lesson #1
 ### To Do List app
-
+1. Clone
+2. ```npm i```
+3. Donwload & install [Expo XDE](https://docs.expo.io/versions/latest/introduction/installation.html)
+4. Open the app via Expo ("Project" > "Open Project")
+5. Open with device - "Device" > "Open with IOS/Android"
 ## Quiz Answers
 
 1. How to add __style__ to a React-Native component as __< Text />__ ?
