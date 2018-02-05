@@ -1,6 +1,6 @@
 # React Native Course - Lesson #1
 ### To Do List app
-1. Clone
+1. Clone (checkout branch lesson_1)
 2. ```npm i```
 3. Donwload & install [Expo XDE](https://docs.expo.io/versions/latest/introduction/installation.html)
 4. Open the app via Expo ("Project" > "Open Project")
