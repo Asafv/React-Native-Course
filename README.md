@@ -1,5 +1,5 @@
-# React Native course - Lesson #2
-## React-Native + Redux State Management
+# React Native course - Lesson #3
+## React-Native + UX elements lib
 
-Mock data from:
-https://s3.amazonaws.com/devops-infra/public/MOCK_DATA.json
+UX components: React-Native-Elements
+Icons repository: https://oblador.github.io/react-native-vector-icons/
