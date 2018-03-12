@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { View, Text, FlatList, Image, StyleSheet } from 'react-native';
+import { ScrollView, View, StyleSheet } from 'react-native';
 import { getList } from '../actions/TempActions';
+import { List, ListItem, Header, Icon } from 'react-native-elements'
 
 class TempComponent extends Component {
 
@@ -11,30 +12,52 @@ class TempComponent extends Component {
   }
 
   render() {
-    const Separator = () => <View style={{height: 10}} />;
     const { list } = this.props;
     return (
       <View style={Styles.container}>
-        <FlatList
-          keyExtractor={(item, index) => item.id}
-          data={list}
-          ItemSeparatorComponent={Separator}
-          renderItem={({item}) =>
-            <View style={Styles.listItemContainer}>
-              <Image style={Styles.img} source={{ uri: item.avatar }} />
-              <Text>{item.property_name}</Text>
-            </View>
-          }
+        <Header
+          leftComponent={<Icon color={'white'} name='menu' />}
+          centerComponent={{ text: 'My Friends', style: { color: '#fff' } }}
+          rightComponent={<Icon color={'orange'} name='home' />}
         />
+        <ScrollView style={Styles.listContainer}>
+          <List containerStyle={{ marginTop: 10 }}>
+            {
+              list.map((item, i) => (
+                <ListItem
+                  roundAvatar
+                  avatar={{ uri: item.avatar }}
+                  key={i}
+                  title={item.property_name}
+                  subtitle={item.location}
+                  rightIcon={<Icon name='chevron-right' />}
+                />
+              ))
+            }
+          </List>
+        </ScrollView>
+        {/*<Icon*/}
+          {/*size={26}*/}
+          {/*type={'feather'}*/}
+          {/*raised*/}
+          {/*name='plus'*/}
+          {/*color='red'*/}
+          {/*containerStyle={Styles.fab}*/}
+          {/*onPress={() => console.log('press!')}*/}
+        {/*/>*/}
       </View>
     );
   }
 
 }
 
+
 const Styles = StyleSheet.create({
   container: {
-    padding: 10,
+    flex: 1,
+  },
+  listContainer: {
+    flex: 1,
   },
   listItemContainer: {
     flexDirection: 'row',
@@ -42,10 +65,11 @@ const Styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'gray',
   },
-  img: {
-    width: 50,
-    height: 50,
-    alignSelf: 'center',
+  fab: {
+    backgroundColor: 'pink',
+    position: 'absolute',
+    bottom: 20,
+    right: 20,
   },
 });
 

@@ -15,7 +15,6 @@ export default class App extends Component {
     return (
       <Provider store={store}>
         <View style={Styles.container}>
-          <Text>app with redux</Text>
           <TempComponent />
         </View>
       </Provider>
