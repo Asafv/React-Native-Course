@@ -1,12 +1,17 @@
 import React from 'react';
-import { StackNavigator } from 'react-navigation';
+import { StackNavigator, TabNavigator } from 'react-navigation';
 import ListingList from './components/ListingList';
 import ListingInfo from './components/ListingInfo';
 import ListingMap from './components/ListingMap';
 import { Icon } from 'react-native-elements';
+import ListingCamera from "./components/ListingCamera";
+import ListingImage from './components/ListingImage';
+const enumScreens = {
+  Listings: 'Listings',
+};
 
 const HomeNav = StackNavigator({
-  Listings: {
+  [enumScreens.Listings]: {
     screen: ListingList,
     navigationOptions: {
       headerRight: <Icon color={'orange'} name='home' />,
@@ -18,18 +23,41 @@ const HomeNav = StackNavigator({
       headerTintColor: 'white',
     },
   },
+  // ListingInfo: {
+  //   screen: ListingInfo,
+  //   navigationOptions: {
+  //     title: 'Listing Info',
+  //   },
+  // },
   ListingInfo: {
-    screen: ListingInfo,
-    navigationOptions: {
-      title: 'Listing Info',
-    },
+    screen: TabNavigator(
+      {
+        Details: {
+          screen: ListingInfo,
+          navigationOptions: {
+            tabBarLabel: 'Details',
+            tabBarIcon: (<Icon name={'details'} size={25} color={'red'}/>),
+          }
+        },
+        Camera: {
+          screen: ListingCamera,
+          navigationOptions: {
+            tabBarLabel: 'Camera',
+            tabBarIcon: (<Icon name={'camera'} size={25} color={'red'}/>),
+          }
+        },
+      }),
   },
   ListingMap: {
     screen: ListingMap,
     // navigationOptions: {
       //title: 'Listing Map',
     // },
-  }
+  },
+  ListingImage: {
+    screen: ListingImage,
+    title: 'Snapshot',
+  },
 });
 
 export default HomeNav;
