@@ -4,13 +4,13 @@
 1. [**`useEffect`**](https://reactjs.org/docs/hooks-overview.html) - `React` hook triggered on every component reder
 
    1.1. `useEffect` do something on every render
-   ```useState(() => { ... });```
+   ```useEffect(() => { ... });```
    
    1.2. `useEffect` do something **ONLY** on initial render
-   ```useState(() => { ... }, []);```
+   ```useEffect(() => { ... }, []);```
    
    1.3. `useEffect` do something on value change (observable)
-   ```useState(() => { ... }, [movies]);```  
+   ```useEffect(() => { ... }, [movies]);```  
 2. Remote http calls to the server with **`axios`**
 
    2.1. `useEffect` with **`async`** call
