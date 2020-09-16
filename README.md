@@ -9,7 +9,7 @@
    1.2. `useEffect` do something **ONLY** on initial render
    ```useEffect(() => { ... }, []);```
    
-   1.3. `useEffect` do something on value change (observable)
+   1.3. `useEffect` do something on state value change (observable)
    ```useEffect(() => { ... }, [movies]);```  
 2. Remote http calls to the server with **`axios`**
 
