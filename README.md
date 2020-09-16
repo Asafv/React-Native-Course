@@ -24,7 +24,7 @@
     myAsyncFunc();
    }, []);
    ```
-3. [**`useState`**](https://reactjs.org/docs/hooks-state.html) - `React` hook for storing component state, if you change this state value then a new reder triggered
+3. [**`useState`**](https://reactjs.org/docs/hooks-state.html) - `React` hook for storing component state, on change this state-value will trigger a new render
    ```
    import React, { useState } from 'react';
    ...
