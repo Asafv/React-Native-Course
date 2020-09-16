@@ -1,7 +1,7 @@
 # React-Native Course
 
 ## Lesson summary
-1. **`useEffect`** - `React` hook triggered on every component reder ([read more from docs](https://reactjs.org/docs/hooks-overview.html))
+1. [**`useEffect`**](https://reactjs.org/docs/hooks-overview.html) - `React` hook triggered on every component reder
 
    1.1. `useEffect` do something on every render
    ```useState(() => { ... });```
@@ -21,7 +21,7 @@
    }, []);
    ```
 3. **`useState`** - `React` hook 
-4. **`FlatList`** - `react-native` component 
+4. [**`FlatList`**](www.google.com) - `react-native` component 
 4. **`Image`** - `react-native` component 
 5. **`Pressable`** - `react-native` component
 6. **`react-navigation`** - create routes and navigate between screens
