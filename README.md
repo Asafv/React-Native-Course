@@ -16,7 +16,10 @@
 
    2.1. `useEffect` with **`async`** call
    ```
-   const myAsyncFunc = async () => { await ...};
+   import axios from 'axios';
+   const myAsyncFunc = async () => { 
+      await axios.get('https://my.remote.server'};
+   };
    useState(() => { 
     myAsyncFunc();
    }, []);
