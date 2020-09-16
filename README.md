@@ -32,9 +32,9 @@
    setName('mobile');
    ```
    
-4. [**`FlatList`**](www.google.com) - `react-native` component 
-5. [**`Image`**](https://reactnative.dev/docs/image) - `react-native` component for displaying an image
-6. [**`Pressable`**](https://reactnative.dev/docs/pressable) - `react-native` component for get a callback on press any component
+4. [**`FlatList`**](www.google.com) - `react-native` build-in component for displaying lists
+5. [**`Image`**](https://reactnative.dev/docs/image) - `react-native` build-in component for displaying an image
+6. [**`Pressable`**](https://reactnative.dev/docs/pressable) - `react-native` build-in component for get a callback on press any component
 7. [**`react-navigation`**](https://reactnavigation.org/docs/hello-react-navigation/) - create routes and navigate between screens
 
    7.1. [**`Stack Navigator`**](https://reactnavigation.org/docs/stack-navigator/) - Provides a way for your app to transition between screens where each new screen is placed on top of a stack.
