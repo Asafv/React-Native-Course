@@ -25,8 +25,10 @@
 4. [**`Image`**](https://reactnative.dev/docs/image) - `react-native` component for displaying an image
 5. [**`Pressable`**](https://reactnative.dev/docs/pressable) - `react-native` component for get a callback on press any component
 6. [**`react-navigation`**](https://reactnavigation.org/docs/navigating/) - create routes and navigate between screens
-  6.1. [**`Stack Navigator`**](https://reactnavigation.org/docs/hello-react-navigation/)
-  6.2. 
+
+   6.1. [**`Stack Navigator`**](https://reactnavigation.org/docs/hello-react-navigation/)
+   
+   6.2. x
   
 ## ToDo
 1. In the `MovieDetails` screen we have the item data (movie) from the prev route (MovieList)
