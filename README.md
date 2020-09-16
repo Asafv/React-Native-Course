@@ -47,6 +47,8 @@
       />
       ```
    7.2. [**Passing parameters to routes**](https://reactnavigation.org/docs/params) - `navigation.navigate('Details', { item });`
+
+8. [**`flex`**](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - how to UX arrange elemnts on screen 
   
 ## ToDo
 1. In the `MovieDetails` screen we have the item data (movie) from the prev route (MovieList)
