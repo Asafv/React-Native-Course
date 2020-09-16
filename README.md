@@ -10,10 +10,11 @@
    ```useEffect(() => { // do something ... }, []);```
    
    1.3. Triggered on state value change (observable)
-   ```useEffect(() => { // do something ... }, [movies]);```  
-2. Remote http calls to the server with **`axios`**
+   ```useEffect(() => { // do something ... }, [movies]);```
+   
+2. Remote http calls to the server with [**`axios`**](https://github.com/axios/axios)
 
-   2.1. `useEffect` with [**`async`**](https://github.com/axios/axios) call
+   2.1. `useEffect` with **`async`** call
    ```
    const myAsyncFunc = async () => { await ...};
    useState(() => { 
