@@ -13,7 +13,7 @@
    ```useEffect(() => { // do something ... }, [movies]);```  
 2. Remote http calls to the server with **`axios`**
 
-   2.1. `useEffect` with **`async`** call
+   2.1. `useEffect` with [**`async`**](https://github.com/axios/axios) call
    ```
    const myAsyncFunc = async () => { await ...};
    useState(() => { 
@@ -22,7 +22,21 @@
    ```
 3. **`useState`** - `React` hook 
 4. [**`FlatList`**](www.google.com) - `react-native` component 
-4. **`Image`** - `react-native` component 
-5. **`Pressable`** - `react-native` component
-6. **`react-navigation`** - create routes and navigate between screens
-  6.1. 
+4. [**`Image`**](https://reactnative.dev/docs/image) - `react-native` component for displaying an image
+5. [**`Pressable`**](https://reactnative.dev/docs/pressable) - `react-native` component for get a callback on press any component
+6. [**`react-navigation`**](https://reactnavigation.org/docs/navigating/) - create routes and navigate between screens
+  6.1. [**`Stack Navigator`**](https://reactnavigation.org/docs/hello-react-navigation/)
+  6.2. 
+  
+## ToDo
+1. In the `MovieDetails` screen we have the item data (movie) from the prev route (MovieList)
+```
+const MovieDetails = ({ route, navigation }) => {
+  const { item } = route.params;
+  console.log('item = ', item);
+ ...
+```
+Display in the **MovieDetails** screen:
+* The "backgroound" image
+* The "avatar" image
+* The movie title
