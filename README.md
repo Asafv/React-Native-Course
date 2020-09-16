@@ -24,7 +24,14 @@
     myAsyncFunc();
    }, []);
    ```
-3. **`useState`** - `React` hook 
+3. [**`useState`**](https://reactjs.org/docs/hooks-state.html) - `React` hook for storing component state, if you change this state value then a new reder triggered
+   ```
+   import React, { useState } from 'react';
+   ...
+   const [name, setName] = useState('');
+   setName('mobile');
+   ```
+   
 4. [**`FlatList`**](www.google.com) - `react-native` component 
 4. [**`Image`**](https://reactnative.dev/docs/image) - `react-native` component for displaying an image
 5. [**`Pressable`**](https://reactnative.dev/docs/pressable) - `react-native` component for get a callback on press any component
