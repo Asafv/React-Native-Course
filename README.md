@@ -1,7 +1,7 @@
 # React-Native Course
 
 ## Lesson summary
-1. [**`useEffect`**](https://reactjs.org/docs/hooks-overview.html) - `React` hook triggered on every component reder
+1. [**`useEffect`**](https://reactjs.org/docs/hooks-overview.html) - `React` hook triggered on every component render
 
    1.1. Triggered on every render 
    ```useEffect(() => { // do something ... });```
