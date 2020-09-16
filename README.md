@@ -3,14 +3,14 @@
 ## Lesson summary
 1. [**`useEffect`**](https://reactjs.org/docs/hooks-overview.html) - `React` hook triggered on every component reder
 
-   1.1. `useEffect` do something on every render
-   ```useEffect(() => { ... });```
+   1.1. Triggered on every render 
+   ```useEffect(() => { // do something ... });```
    
-   1.2. `useEffect` do something **ONLY** on initial render
-   ```useEffect(() => { ... }, []);```
+   1.2. Triggered **ONLY** on initial render
+   ```useEffect(() => { // do something ... }, []);```
    
-   1.3. `useEffect` do something on state value change (observable)
-   ```useEffect(() => { ... }, [movies]);```  
+   1.3. Triggered on state value change (observable)
+   ```useEffect(() => { // do something ... }, [movies]);```  
 2. Remote http calls to the server with **`axios`**
 
    2.1. `useEffect` with **`async`** call
