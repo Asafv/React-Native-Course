@@ -33,20 +33,20 @@
    ```
    
 4. [**`FlatList`**](www.google.com) - `react-native` component 
-4. [**`Image`**](https://reactnative.dev/docs/image) - `react-native` component for displaying an image
-5. [**`Pressable`**](https://reactnative.dev/docs/pressable) - `react-native` component for get a callback on press any component
-6. [**`react-navigation`**](https://reactnavigation.org/docs/hello-react-navigation/) - create routes and navigate between screens
+5. [**`Image`**](https://reactnative.dev/docs/image) - `react-native` component for displaying an image
+6. [**`Pressable`**](https://reactnative.dev/docs/pressable) - `react-native` component for get a callback on press any component
+7. [**`react-navigation`**](https://reactnavigation.org/docs/hello-react-navigation/) - create routes and navigate between screens
 
-   6.1. [**`Stack Navigator`**](https://reactnavigation.org/docs/stack-navigator/) - Provides a way for your app to transition between screens where each new screen is placed on top of a stack.
+   7.1. [**`Stack Navigator`**](https://reactnavigation.org/docs/stack-navigator/) - Provides a way for your app to transition between screens where each new screen is placed on top of a stack.
    
-   6.2. [**Moving between screens**](https://reactnavigation.org/docs/navigating)
+   7.2. [**Moving between screens**](https://reactnavigation.org/docs/navigating)
       ```
       <Button
         title="Go to Details"
         onPress={() => navigation.navigate('Details')}
       />
       ```
-   6.2. [**Passing parameters to routes**](https://reactnavigation.org/docs/params) - `navigation.navigate('Details', { item });`
+   7.2. [**Passing parameters to routes**](https://reactnavigation.org/docs/params) - `navigation.navigate('Details', { item });`
   
 ## ToDo
 1. In the `MovieDetails` screen we have the item data (movie) from the prev route (MovieList)
