@@ -12,8 +12,19 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="MovieList" component={MovieList} />
-        <Stack.Screen name="MovieDetails" component={MovieDetails} />
+        <Stack.Screen
+          name="MovieList"
+          component={MovieList}
+          options={{ title: 'movies app' }}
+        />
+        <Stack.Screen
+          name="MovieDetails"
+          component={MovieDetails}
+          options={({ route }) => ({
+            title: route.params.itemMovie.title
+          })}
+          
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

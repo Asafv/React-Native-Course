@@ -1,15 +1,70 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Image, StyleSheet } from 'react-native';
+import { Rating, AirbnbRating } from 'react-native-ratings';
+import Storage from './Storage';
 
-const MovieDetails = ({ route, navigation }) => {
-  const { item } = route.params;
-  console.log('item = ', item);
+const MovieDetails = ({ navigation, route }) => {
+  const {
+    poster_path,
+    backdrop_path,
+    vote_average,
+    id,
+  } = route.params.itemMovie;
+  const uriPoster = `https://image.tmdb.org/t/p/w500/${poster_path}`
+  const uriCover = `https://image.tmdb.org/t/p/w500/${backdrop_path}`
+  console.log('item: ', route.params.itemMovie);
+
+  const [rating,setRating] = useState();
+
+  const ratingCompleted = (rating) => {
+    console.log("Rating is: " + rating);
+    setRating(rating);
+    Storage.rating[id] = rating;
+  }
+
   return (
-    <View>
-      <Text>movie details</Text>
-      <Text>{JSON.stringify(item)}</Text>
+    <View style={{ flex: 1 }}>
+      <Image
+        style={styles.cover}
+        source={{ uri: uriCover }}
+        // resizeMethod="auto"
+        resizeMode="contain"
+      />
+      <Image
+        style={styles.poster}
+        source={{ uri: uriPoster }}
+        resizeMode="cover"
+      />
+      <Text>{vote_average}</Text>
+      <Rating
+        type='star'
+        ratingCount={3}
+        imageSize={60}
+        showRating
+        onFinishRating={ratingCompleted}
+      />
     </View>
   )
 };
+
+const styles = StyleSheet.create({
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  poster: {
+    width: '30%',
+    height: '15%',
+    position: 'absolute',
+    left: 10,
+    top: 20,
+    borderRadius: 5,
+  },
+  cover: {
+    width: '100%',
+    height: '30%',
+    opacity: 0.5
+  }
+});
 
 export default MovieDetails;
