@@ -2,19 +2,28 @@ import React, { useState } from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import { Rating, AirbnbRating } from 'react-native-ratings';
 import Storage from './Storage';
+import { useSelector } from 'react-redux';
 
 const MovieDetails = ({ navigation, route }) => {
+  const movieList = useSelector(state => state.movies.movies);
+  console.log('movies =', movieList);
+
+  const { id } = route.params.itemMovie;
+
+  const movie = movieList.find(movie => movie.id === id);
   const {
     poster_path,
     backdrop_path,
     vote_average,
-    id,
-  } = route.params.itemMovie;
+  } = movie;
+
+
+  console.log(movie);
   const uriPoster = `https://image.tmdb.org/t/p/w500/${poster_path}`
   const uriCover = `https://image.tmdb.org/t/p/w500/${backdrop_path}`
   console.log('item: ', route.params.itemMovie);
 
-  const [rating,setRating] = useState();
+  const [rating, setRating] = useState();
 
   const ratingCompleted = (rating) => {
     console.log("Rating is: " + rating);
