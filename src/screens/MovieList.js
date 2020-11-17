@@ -4,8 +4,6 @@ import axios from 'axios';
 import Storage from '../Storage';
 import { useDispatch } from 'react-redux';
 
-import GridList from 'react-native-grid-list';
-
 const MovieList = ({ navigation, children }) => {
 
   const [movies, setMovies] = useState([]);
