@@ -2,8 +2,8 @@ import React from 'react';
 import { View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack';
-import MovieList from './MovieList';
-import MovieDetails from './MovieDetails';
+import  MovieDetails from './screens/MovieDetails';
+import  MovieList from './screens/MovieList';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import movieReducer from './MovieReducer';

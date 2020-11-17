@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Text, View, FlatList, Image, Pressable } from 'react-native';
+import { Text, FlatList, View, Image, Pressable, StyleSheet } from 'react-native';
 import axios from 'axios';
 import Storage from '../Storage';
 import { useDispatch } from 'react-redux';
+
+import GridList from 'react-native-grid-list';
 
 const MovieList = ({ navigation, children }) => {
 
@@ -28,44 +30,50 @@ const MovieList = ({ navigation, children }) => {
   }, []);
 
   useEffect(() => { console.log('another render') });
+
   // 2. get the data (movies) - display on screen
   const renderItem = ({ item }) => {
     const uri = `https://image.tmdb.org/t/p/w500/${item.poster_path}`
     const itemMovie = { ...item };
     return (
-      <Pressable onPress={() => {
+      <Pressable 
+        style={styles.container}
+        onPress={() => {
         console.log('press button');
         navigation.navigate('MovieDetails', { itemMovie });
       }}>
-        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
           <Image
-            style={{ width: 50, height: 50, borderRadius: 25 }}
+            style={styles.image}
             source={{ uri }}
           />
-          <Text style={{
-            left: 30,
-            color: 'yellow',
-            fontSize: 20
-          }}>{item.title}</Text>
-          <Text style={{
-            color: 'blue',
-            fontSize: 20
-          }}>{Storage.rating[item.id]}</Text>
-        </View >
       </Pressable>
     )
   };
 
   return (
-    <View style={{ flex: 1, backgroundColor: 'black' }}>
+    <View style={styles.container}>
       <FlatList
         data={movies}
-        renderItem={renderItem}
-        keyExtractor={(item, i) => i.toString()}
-        ItemSeparatorComponent={() => <View style={{ height: 20 }} />}
-      />
+          numColumns={3}
+          renderItem={renderItem}
+          />
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    flexDirection: 'column',
+    alignItems: 'stretch',
+  },
+  image: {
+    // justifyContent: 'center',
+    // alignItems: 'stretch',
+    height: 140,
+    margin: 2,
+  },
+});
 
 export default MovieList;
